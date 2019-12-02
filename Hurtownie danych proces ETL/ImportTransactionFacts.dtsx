@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="11/25/2019 10:52:17 PM"
+  DTS:CreationDate="11/26/2019 10:53:22 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-69IQP4E"
   DTS:CreatorName="DESKTOP-69IQP4E\Pietrek Kogucik"
-  DTS:DTSID="{680D0884-B689-40DC-8464-5B532259A258}"
+  DTS:DTSID="{B2076779-EA70-494C-9A61-041AD456F89A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1900.78"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{5852E9A7-23E4-4176-A6D3-88605B0AAE15}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{85751A3C-6DF9-4B04-8194-1051A4E458F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-69IQP4E.PharmaciesWarehouse_v1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{6131EFA0-0613-473E-B6E3-B6A74D254B24}"
+      DTS:DTSID="{D781DB59-1D38-4C13-83FA-25262B714E3C}"
       DTS:ObjectName="DESKTOP-69IQP4E.PharmaciesWarehouse_v1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -27,9 +27,101 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Fact Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8738FD24-5299-4437-9D7A-38BD2F9D857B}"
+      DTS:ObjectName="Fact Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Pietrek Kogucik\OneDrive - Politechnika Wroclawska\Hurtownie danych\Hurtownie danych źródła\TransactionsPrawidloweDane.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{AD9DD5E0-8E21-4D44-9AE9-E24580FE4D98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductId"
+              DTS:DTSID="{BD4D200A-52A5-46B4-A7FC-89B07EFFB3C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InvoiceNumber"
+              DTS:DTSID="{ACB8BB57-C709-41C0-BAAE-230CF94518C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ClientId"
+              DTS:DTSID="{BB21611E-8412-48A6-AF2E-582CE9240E3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateId"
+              DTS:DTSID="{3F387F35-3F4C-4037-9A44-AC4407A277CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PharmacyId"
+              DTS:DTSID="{86598E52-8186-4F18-A66A-CCA5980DE17D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalAmount"
+              DTS:DTSID="{2E08430A-15C7-41EB-8DE2-BB5C0234FEA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalCost"
+              DTS:DTSID="{087AB5CF-0CF8-4545-B660-4E36FE853F3B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{BE3B4C70-9091-4557-BC02-E528BE677D65}"
+      DTS:DTSID="{0E335848-C339-491C-AED7-A1F2B1E2270C}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,98 +131,71 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Pietrek Kogucik\Documents\Hurtownie danych źródła\PharmacyDates.csv">
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\Pietrek Kogucik\OneDrive - Politechnika Wroclawska\Hurtownie danych\Hurtownie danych źródła\TransactionsV2.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Id"
-              DTS:DTSID="{1A9153C9-BAE1-44FB-BD74-5DD246EB51D5}"
+              DTS:DTSID="{F5B3F8F2-93E0-4720-8059-41254649ABC0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Year"
-              DTS:DTSID="{052E0053-90CD-4DDC-BB92-2F8F053B9406}"
+              DTS:ObjectName="ProductId"
+              DTS:DTSID="{E0A05102-B9D5-4139-9FB8-81FAF23E3CF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Quarter"
-              DTS:DTSID="{1675EAD5-AA6F-4A17-B187-6672186909EC}"
+              DTS:ObjectName="InvoiceNumber"
+              DTS:DTSID="{C6BBEF82-F4E1-40FA-9625-18FB82418213}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Month"
-              DTS:DTSID="{6544B9A4-C1F0-4187-BD49-F5AB48DE6D66}"
+              DTS:ObjectName="ClientId"
+              DTS:DTSID="{BC554181-9537-42B0-850D-4D6BA9C246F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="LeapYear"
-              DTS:DTSID="{6EDEB376-4604-4B67-B41D-EE7546C09633}"
+              DTS:ObjectName="DateId"
+              DTS:DTSID="{C6D085EC-4912-4932-827F-D8E6BE1B694F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Days31"
-              DTS:DTSID="{9F19AF35-E22A-4AA0-ADEB-D894BD42B86F}"
+              DTS:ObjectName="PharmacyId"
+              DTS:DTSID="{CB8FD095-4143-4FE3-8075-8E05E04D30BC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Days30"
-              DTS:DTSID="{901F8D1A-2A35-4AE3-A236-75303B1275F0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Days29"
-              DTS:DTSID="{A971D0A1-C38B-496E-B0C1-AE93CEAA1BA0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Days28"
-              DTS:DTSID="{AA3A3247-6CC9-45DD-9514-82AFCE260196}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Day"
-              DTS:DTSID="{F081B4FD-89DE-43E8-B660-4BCC60F15147}"
+              DTS:ObjectName="TotalAmount"
+              DTS:DTSID="{BE02642B-279A-48FB-86E3-65F0F3F79DFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,8 +203,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="DayOfYear"
-              DTS:DTSID="{860F2275-5755-4444-BEB0-9DFB6ACE6F4D}"
+              DTS:ObjectName="TotalCost"
+              DTS:DTSID="{58500F3B-E652-4DD0-A5F7-858C04C09EB5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -152,7 +217,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{E646291F-F113-4CCE-ACF2-0B3585F0DAA3}"
+      DTS:DTSID="{0087C700-CC99-49CC-BF06-46BA7CDEE529}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -176,46 +241,60 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Id]"
-                      cachedCodepage="65001"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Id"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Id]" />
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Id]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Year]"
-                      cachedCodepage="65001"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ProductId]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Year"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Year]" />
+                      cachedName="ProductId"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Quarter]"
-                      cachedCodepage="65001"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[InvoiceNumber]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Quarter"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Quarter]" />
+                      cachedName="InvoiceNumber"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[InvoiceNumber]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Month]"
-                      cachedCodepage="65001"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientId]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Month"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Month]" />
+                      cachedName="ClientId"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ClientId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Day]"
-                      cachedCodepage="65001"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[DateId]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Day"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Day]" />
+                      cachedName="DateId"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfYear]"
-                      cachedCodepage="65001"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PharmacyId]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="DayOfYear"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[DayOfYear]" />
+                      cachedName="PharmacyId"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PharmacyId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[TotalAmount]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalAmount"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalAmount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[TotalCost]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCost"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -228,19 +307,19 @@
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Id]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
                       dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Id]"
-                      name="Id"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
+                      name="Copy of Id"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -248,19 +327,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Year]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductId]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Year]"
-                      name="Year"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductId]"
+                      name="Copy of ProductId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Year]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -268,19 +347,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Quarter]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InvoiceNumber]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Quarter]"
-                      name="Quarter"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InvoiceNumber]"
+                      name="Copy of InvoiceNumber"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Quarter]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[InvoiceNumber]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -288,19 +367,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Month]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientId]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Month]"
-                      name="Month"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientId]"
+                      name="Copy of ClientId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Month]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ClientId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -308,19 +387,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Day]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateId]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Day]"
-                      name="Day"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateId]"
+                      name="Copy of DateId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Day]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -328,19 +407,60 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PharmacyId]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]"
-                      name="DayOfYear"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PharmacyId]"
+                      name="Copy of PharmacyId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[DayOfYear]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PharmacyId]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalAmount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalAmount]"
+                      name="Copy of TotalAmount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalAmount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
+                      name="Copy of TotalCost"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -375,12 +495,88 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Dates File Source"
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[TotalCost]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCost"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]},"\"","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(TotalCost,"\"","")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1045"
-              name="Dates File Source"
+              name="Flat File Source"
               usesDispositions="true"
               version="1">
               <properties>
@@ -395,25 +591,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Dates File Source.Connections[FlatFileConnection]"
+                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Id]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
                       name="Id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -428,15 +624,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Year]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductId]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductId]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Year]"
-                      name="Year"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ProductId]"
+                      name="ProductId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -450,15 +646,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Quarter]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[InvoiceNumber]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Quarter]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InvoiceNumber]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Quarter]"
-                      name="Quarter"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[InvoiceNumber]"
+                      name="InvoiceNumber"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -472,15 +668,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Month]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ClientId]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ClientId]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Month]"
-                      name="Month"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ClientId]"
+                      name="ClientId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -494,15 +690,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[LeapYear]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateId]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[LeapYear]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateId]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[LeapYear]"
-                      name="LeapYear"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DateId]"
+                      name="DateId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -516,15 +712,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days31]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PharmacyId]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days31]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PharmacyId]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days31]"
-                      name="Days31"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PharmacyId]"
+                      name="PharmacyId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -538,15 +734,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days30]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalAmount]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days30]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalAmount]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days30]"
-                      name="Days30"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalAmount]"
+                      name="TotalAmount"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -560,81 +756,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days29]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days29]"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCost]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days29]"
-                      name="Days29"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days28]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days28]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Days28]"
-                      name="Days28"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Day]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Day]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[Day]"
-                      name="Day"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[DayOfYear]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[DayOfYear]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].Columns[DayOfYear]"
-                      name="DayOfYear"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TotalCost]"
+                      name="TotalCost"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -651,95 +781,77 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
                       name="Id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductId]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Year" />
+                      name="ProductId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Quarter]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[InvoiceNumber]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Quarter" />
+                      name="InvoiceNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ClientId]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Month" />
+                      name="ClientId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[LeapYear]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateId]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="LeapYear" />
+                      name="DateId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days31]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PharmacyId]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Days31" />
+                      name="PharmacyId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days30]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalAmount]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Days30" />
+                      name="TotalAmount" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days29]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TotalCost]"
+                      codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Days29" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Days28]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="Days28" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[Day]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="Day" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output].ExternalColumns[DayOfYear]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="DayOfYear" />
+                      name="TotalCost" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -767,7 +879,7 @@
                   dataType="System.String"
                   description="The name of the database object to copy data into."
                   expressionType="Notify"
-                  name="BulkInsertTableName">[dbo].[Date]</property>
+                  name="BulkInsertTableName">[dbo].[Transaction]</property>
                 <property
                   dataType="System.Boolean"
                   description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
@@ -811,7 +923,7 @@
                   dataType="System.Int32"
                   description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
                   expressionType="Notify"
-                  name="Timeout">30</property>
+                  name="Timeout">60</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
@@ -832,41 +944,54 @@
                   name="SQL Server Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Year]"
-                      cachedDataType="i4"
-                      cachedName="Year"
-                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Year]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Year]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Quarter]"
-                      cachedDataType="i4"
-                      cachedName="Quarter"
-                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Quarter]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Quarter]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Month]"
-                      cachedDataType="i4"
-                      cachedName="Month"
-                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Month]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Day]"
-                      cachedDataType="i4"
-                      cachedName="Day"
-                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Day]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Day]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[DayOfYear]"
-                      cachedDataType="i4"
-                      cachedName="DayOfYear"
-                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[DayOfYear]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Id]"
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of Id]"
                       cachedDataType="i8"
-                      cachedName="Id"
+                      cachedName="Copy of Id"
                       externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Id]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Id]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of ProductId]"
+                      cachedDataType="i8"
+                      cachedName="Copy of ProductId"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ProductId]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of ClientId]"
+                      cachedDataType="i8"
+                      cachedName="Copy of ClientId"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ClientId]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of DateId]"
+                      cachedDataType="i8"
+                      cachedName="Copy of DateId"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[DateId]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of PharmacyId]"
+                      cachedDataType="i8"
+                      cachedName="Copy of PharmacyId"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[PharmacyId]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PharmacyId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of InvoiceNumber]"
+                      cachedDataType="i8"
+                      cachedName="Copy of InvoiceNumber"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[InvoiceNumber]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InvoiceNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of TotalCost]"
+                      cachedDataType="decimal"
+                      cachedName="Copy of TotalCost"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[TotalCost]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Copy of TotalAmount]"
+                      cachedDataType="i4"
+                      cachedName="Copy of TotalAmount"
+                      externalMetadataColumnId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[TotalAmount]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalAmount]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -875,25 +1000,35 @@
                       dataType="i8"
                       name="Id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Year]"
-                      dataType="i4"
-                      name="Year" />
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ProductId]"
+                      dataType="i8"
+                      name="ProductId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Quarter]"
-                      dataType="i4"
-                      name="Quarter" />
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[DateId]"
+                      dataType="i8"
+                      name="DateId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Month]"
-                      dataType="i4"
-                      name="Month" />
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ClientId]"
+                      dataType="i8"
+                      name="ClientId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Day]"
-                      dataType="i4"
-                      name="Day" />
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[PharmacyId]"
+                      dataType="i8"
+                      name="PharmacyId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[DayOfYear]"
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[InvoiceNumber]"
+                      dataType="i8"
+                      name="InvoiceNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[TotalCost]"
+                      dataType="numeric"
+                      name="TotalCost"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[TotalAmount]"
                       dataType="i4"
-                      name="DayOfYear" />
+                      name="TotalAmount" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -906,10 +1041,15 @@
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Dates File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -918,7 +1058,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{4042468B-6A39-4BBE-A5C7-5A6A86F4B042}"
+      DTS:DTSID="{B0ACBA59-AE6E-459A-B4F4-828DD280FBF6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -926,8 +1066,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{6131EFA0-0613-473E-B6E3-B6A74D254B24}"
-          SQLTask:SqlStatementSource="DELETE FROM dbo.Date" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{D781DB59-1D38-4C13-83FA-25262B714E3C}"
+          SQLTask:SqlStatementSource="DELETE FROM dbo.Transaction" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -935,7 +1075,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{AC5BC05F-FED1-45CC-9B74-E882F58A5720}"
+      DTS:DTSID="{F24A4BEC-4ED4-4988-BD94-AC0DA5DB4292}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -956,25 +1096,25 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="181,176" />
+          TopLeft="237,161" />
         <NodeLayout
           Size="170,42"
           Id="Package\Execute SQL Task"
-          TopLeft="175,37" />
+          TopLeft="233,58" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="259.25,79">
+          TopLeft="316.25,100">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,97"
+              EndConnector="0,61"
               Start="0,0"
-              End="0,89.5">
+              End="0,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.5" />
+                    End="0,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -990,33 +1130,59 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Data Flow Task\Dates File Source"
-          TopLeft="408,29" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="194,42"
           Id="Package\Data Flow Task\SQL Server Destination"
-          TopLeft="400,260" />
+          TopLeft="367,293" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="391,58" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="413,129" />
+          TopLeft="391,177" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="118,58" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="492.25,71">
+          TopLeft="274,79">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="117,0"
               Start="0,0"
-              End="0,50.5">
+              End="109.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="109.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="470.75,100">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77"
+              Start="0,0"
+              End="0,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1027,24 +1193,26 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="495.25,171">
+          TopLeft="467.75,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89"
+              EndConnector="0,74"
               Start="0,0"
-              End="0,81.5">
+              End="0,66.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.5" />
+                    End="0,66.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,25.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
